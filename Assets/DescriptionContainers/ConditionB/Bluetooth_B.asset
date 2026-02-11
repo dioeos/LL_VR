@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfbc4035f4de92c49bc5fabde9825459, type: 3}
+  m_Name: Bluetooth_B
+  m_EditorClassIdentifier: 
+  condition: 1
+  dataType: 1
+  previewVideo: {fileID: 0}
+  text: 'Bluetooth proximity data, including signals from nearby devices that indicate
+    closeness to certain areas or objects, allows the building to respond to presence
+    near certain areas, such as triggering access or automated systems.  Sharing
+    this data may allow inferences about location within the building and interactions
+    with specific spaces or entry points.
+
+'
