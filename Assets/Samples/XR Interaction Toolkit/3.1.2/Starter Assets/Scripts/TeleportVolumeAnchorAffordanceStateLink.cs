@@ -1,4 +1,6 @@
+using System;
 using UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.State;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
@@ -9,6 +11,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
     /// of the state provider's originally bound interactable.
     /// </summary>
     [RequireComponent(typeof(XRInteractableAffordanceStateProvider))]
+    [Obsolete("The Affordance System namespace and all associated classes have been deprecated. The existing affordance system will be moved, replaced and updated with a new interaction feedback system in a future version of XRI.")]
     public class TeleportVolumeAnchorAffordanceStateLink : MonoBehaviour
     {
         [SerializeField]
