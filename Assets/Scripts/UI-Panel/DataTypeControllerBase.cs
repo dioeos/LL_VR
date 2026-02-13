@@ -14,16 +14,19 @@ public abstract class DataTypeControllerBase : MonoBehaviour
   protected GameObject[] conferenceAreas;
   protected GameObject[] commonAreas;
 
-  private string workspaceTag = "WorkspaceAreas";
-  private string conferenceTag = "ConferenceAreas";
-  private string commonTag = "CommonAreas";
+  private string workspaceTag = "Workspaces";
+  private string conferenceTag = "Conference";
+  private string commonTag = "Common";
 
   protected void Awake()
   {
     // fetch all areas and store into variables via tags
     workspaceAreas = GameObject.FindGameObjectsWithTag(workspaceTag);
+    Debug.Log("Workspace Area: " + workspaceAreas.Length);
     conferenceAreas = GameObject.FindGameObjectsWithTag(conferenceTag);
+    Debug.Log("Conference Area: " + conferenceAreas.Length);
     commonAreas = GameObject.FindGameObjectsWithTag(commonTag);
+    Debug.Log("Common Area: " + commonAreas.Length);
   }
 
   protected void OnEnable()

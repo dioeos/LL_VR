@@ -22,6 +22,10 @@ public class UIController2 : MonoBehaviour
   [SerializeField]
   private IntroModuleController introModule;
 
+  [Tooltip("The finished module for the UI panel")]
+  [SerializeField]
+  private FinishedModuleController finishedModule;
+
   [Tooltip("The data module for the UI panel")]
   [SerializeField]
   private DataSelectionModuleController dataModule;
@@ -34,7 +38,7 @@ public class UIController2 : MonoBehaviour
   [SerializeField]
   private TMP_Text headerUI;
 
-  private int[] stepOrder = { 0, 1, 2, 3, 4 };
+  private int[] stepOrder = { 0, 1, 2, 3, 4, 5 };
   private int stepIndex = 0;
 
   [Tooltip(
@@ -49,6 +53,7 @@ public class UIController2 : MonoBehaviour
     // show introduction module, disable the data selection module
     introModule.Show();
     dataModule.Hide();
+    finishedModule.Hide();
   }
 
   private void UpdateCurrentOptions()
@@ -78,7 +83,6 @@ public class UIController2 : MonoBehaviour
     switch (stepVal)
     {
       case 0:
-        Debug.Log("Introduction");
         if (dataModule.IsVisible())
           dataModule.Hide();
         introModule.Show();
@@ -105,6 +109,13 @@ public class UIController2 : MonoBehaviour
         Debug.Log("Step 4");
         headerUI.text = "Step 4 - Health";
         StepFourTriggered?.Invoke();
+        break;
+      case 5:
+        headerUI.text = "Menu";
+        if (dataModule.IsVisible())
+          dataModule.Hide();
+        finishedModule.Show();
+        continueButton.gameObject.SetActive(false);
         break;
     }
   }

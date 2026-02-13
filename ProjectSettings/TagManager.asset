@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Anchor
   - Floor
+  - Workspaces
+  - Conference
+  - Common
   layers:
   - Default
   - TransparentFX
